@@ -90,7 +90,6 @@ class PullRequest(Event):
                 data = json.dumps({
                     "body": "Fixes #{}".format(match.group('id'))
                 })
-                print end_point, headers, data
                 response = requests.post(end_point, headers=headers, data=data)
                 if not response.ok:
                     logging.error(response.status_code)
