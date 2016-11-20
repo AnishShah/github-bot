@@ -11,7 +11,7 @@ import os
 import requests
 
 
-ALLOWED_EVENTS = ('pull_request')
+ALLOWED_EVENTS = ('pull_request',)
 
 
 if hasattr(hmac, "compare_digest"):
