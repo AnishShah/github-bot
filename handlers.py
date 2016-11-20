@@ -92,5 +92,5 @@ class PullRequest(Event):
                 })
                 response = requests.post(end_point, headers=headers, data=data)
                 if not response.ok:
-                    logging.error(response.status_code)
+                    logging.error(response.text)
                     raise Exception('Error while adding a comment')
