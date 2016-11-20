@@ -14,15 +14,19 @@ Steps to deploy on Heroku
 6. `git push heroku master` This will generate a URL where your app is deployed.
 
 7. Set environment variables by running
+
    `heroku config:set ACCESS_TOKEN=<access_token>` (Paste the access token geenerate here)
+   
    `heroku config:set SECRET_KEY=<secret_key>` (Add a secret key which will be used to authenticate GitHub webhooks payload)
 
 8. Go to your project/organization on GitHub > Settings > Webhooks & services > Add Webhook
 
 9. Payload URL will be the URL generated above.
 
-10. Let me select individual events > Check `Pull Request`
+10. Add the secret key.
 
-11. Add Webhook.
+11. Let me select individual events > Check `Pull Request`
+
+12. Add Webhook.
 
 To debug, you can check the logs using `heroku logs` command.
